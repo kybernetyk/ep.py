@@ -2,7 +2,7 @@
 
 # ep.py - a command line client for epguides.com
 #
-# Version 0.1a - (2011-01-02)
+# Version 0.1b - (2011-01-02)
 #
 # licensed under GLP3 (because I have terminal RMS)
 # see http://www.gnu.org/licenses/gpl-3.0.txt
