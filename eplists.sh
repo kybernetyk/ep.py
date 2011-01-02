@@ -16,6 +16,8 @@ exec 10<~/.ep.py.rc
 
 while read LINE <&10; do
 	   ep.py "$LINE" | head -n 2
+		 echo ""
 done
 
 exec 10>&-
+
