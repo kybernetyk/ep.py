@@ -3,9 +3,12 @@
 # reads in ~/.ep.py.rc and shows the next airing date for each show
 #
 # .ep.py.rc format:
-# 	showname
-# 	showname
-#   showname
+#showname
+#showname
+#showname
+#
+#
+# see _sample_.ep.py.rc
 #
 # by d. arndt
 # https://github.com/daarndt
