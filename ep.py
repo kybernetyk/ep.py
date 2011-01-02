@@ -114,7 +114,7 @@ def main():
 
 	print "Showing %s episode list for '%s'" % (mode, show_name);
 	for ep in episodes:
-		print ("ep #%s: airdate=%s title='%s'" % (ep['epnum'],ep['airdate'],ep['title']));
+		print ("\tep #%s: airdate=%s title='%s'" % (ep['epnum'],ep['airdate'],ep['title']));
 
 main();
 
