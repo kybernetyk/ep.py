@@ -2,6 +2,8 @@
 
 # ep.py - a command line client for epguides.com
 #
+# Version 0.1a - (2011-01-02)
+#
 # licensed under GLP3 (because I have terminal RMS)
 # see http://www.gnu.org/licenses/gpl-3.0.txt
 #
@@ -87,7 +89,7 @@ def main():
 		show_name = sys.argv[2];
 		mode = 'all';
 
-	show_name = re.sub(r'\s', '', show_name)
+	show_name = re.sub(r'\s', '', show_name.lower())
 
 	episodes = get_episodes();
 	
