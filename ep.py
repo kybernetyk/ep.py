@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+
+# ep.py - a command line client for epguides.com
+# licensed under GLP3 (because I have terminal RMS)
+# (c) Jaroslaw Szpilewski 2011
+# http://nntp.pl
+
 import urllib2
 import re
 import pprint
