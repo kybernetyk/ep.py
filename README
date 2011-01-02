@@ -1,6 +1,7 @@
 ep.py - a command line client for epguides.com
 
 license: GPL V3 (because I have RMS!)
+project page: https://github.com/jsz/ep.py
 
 install:
 chmod +x ep.py
@@ -15,6 +16,6 @@ to get a complete ep list:
 	ep.py -a <tv show name>
 
 example (lol rly?):
-	./ep.py house
+	./ep.py "how I met your mother"
 
 HACK THE PLANET!!!
