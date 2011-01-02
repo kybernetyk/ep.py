@@ -21,6 +21,8 @@ example (lol rly?):
 Tested on OS X 10.6, Linux 2.6.something
 Requires Python 2.6 (not tested with 2.4, 2.5, 3.x)
 
+now new the eplists.sh script which checks a list of shows.
+show names are read from ~/.ep.py.rc
 
 contact:
 jszpilewski@me.com
