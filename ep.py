@@ -93,6 +93,8 @@ def main():
 		show_name = sys.argv[2];
 		mode = 'all';
 
+	temp_name = show_name
+
 	show_name = re.sub(r'\s', '', show_name.lower())
 
 	try:
@@ -112,7 +114,7 @@ def main():
 	if mode == 'unaired':
 		episodes = filter_unaired(episodes);
 
-	print "Showing %s episode list for '%s'" % (mode, show_name);
+	print "Showing %s episode list for '%s'" % (mode, temp_name);
 	for ep in episodes:
 		print ("\tep #%s: airdate=%s title='%s'" % (ep['epnum'],ep['airdate'],ep['title']));
 
