@@ -36,7 +36,7 @@ def get_episodes ():
 	for line in ep_list:
 		if ('&bull' in line):
 			continue;
-		tmpline = re.sub('[ \t\n\r:]+', ' ', line); 
+		tmpline = re.sub('[ \t\n\r]+', ' ', line); 
 		columns = tmpline.split();
 
 		if len(columns) < 4:
