@@ -68,6 +68,10 @@ def filter_unaired (eplist):
 	time_format = "%d/%b/%y";
 	for ep in eplist:
 		airdate = ep['airdate'];
+		if airdate.lower() == 'unaired':
+			ret.append(ep);
+			continue;
+
 		then = datetime.datetime.fromtimestamp(time.mktime(time.strptime(airdate, time_format)))
 		
 		delta = now - then;
@@ -91,7 +95,18 @@ def main():
 
 	show_name = re.sub(r'\s', '', show_name.lower())
 
-	episodes = get_episodes();
+	try:
+		episodes = get_episodes();
+	except urllib2.HTTPError as theerr:
+		ecode = theerr.getcode();
+		if ecode == 404:
+			print "Error retrieving episode list!\n\tServer returned 404 - check the show's name!\n\tShow years has to be appended with an underscore _. Ex: v_2009 doctorwho_2005";
+		else:
+			print "epguides.com returned error code: " + str(ecode);
+		return;
+#	else:
+#		print "error retrieving episode list."
+#		return;
 	
 	if mode == 'unaired':
 		episodes = filter_unaired(episodes);
