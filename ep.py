@@ -100,7 +100,7 @@ def main():
 	except urllib2.HTTPError as theerr:
 		ecode = theerr.getcode();
 		if ecode == 404:
-			print "Error retrieving episode list!\n\tServer returned 404 - check the show's name!\n\tShow years has to be appended with an underscore _. Ex: v_2009 doctorwho_2005";
+			print "[!] Error retrieving episode list!\n[?] Server returned 404 - check the show's name!\n\t[i] Show years have to be appended with an underscore _. Ex: v_2009 doctorwho_2005\n\t[i] For some shows 'the' is not accepted. ex: 'the big bang theory' fails. 'big bang theory' works";
 		else:
 			print "epguides.com returned error code: " + str(ecode);
 		return;
