@@ -104,9 +104,10 @@ def main():
 		else:
 			print "epguides.com returned error code: " + str(ecode);
 		return;
-#	else:
-#		print "error retrieving episode list."
-#		return;
+	except Exception as ex:
+		print "error retrieving episode list."
+		print ex;
+		return;
 	
 	if mode == 'unaired':
 		episodes = filter_unaired(episodes);
