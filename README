@@ -12,4 +12,7 @@ to get yet unaired episodes:
 to get a complete ep list:
 	ep.py -a <tv show name>
 
+example (lol rly?):
+	./ep.py house
+
 HACK THE PLANET!!!
