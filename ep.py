@@ -56,7 +56,8 @@ def get_episodes ():
 		eptitle = raw_title[start_pos:stop_pos];
 		episode = { 'epnum' : epnum,
 								'airdate' : epdate,
-								'title' : eptitle
+								'title' : eptitle,
+								'append' : ''
 							};
 		episodes.append (episode);
 	return episodes;
@@ -75,6 +76,10 @@ def filter_unaired (eplist):
 		then = datetime.datetime.fromtimestamp(time.mktime(time.strptime(airdate, time_format)))
 		
 		delta = now - then;
+		
+		if delta.days == 0:
+			ep['append'] = "*** today ***";
+		
 		if delta.days <= 0:
 			ret.append(ep);
 	return ret;
@@ -116,7 +121,7 @@ def main():
 
 	print "Showing %s episode list for '%s'" % (mode, temp_name);
 	for ep in episodes:
-		print ("\tep #%s: airdate=%s title='%s'" % (ep['epnum'],ep['airdate'],ep['title']));
+		print ("\t%s ep #%s: airdate=%s title='%s' %s" % (ep['append'],ep['epnum'],ep['airdate'],ep['title'],ep['append']));
 
 main();
 
