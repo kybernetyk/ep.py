@@ -121,7 +121,7 @@ def main():
 
 	print "Showing %s episode list for '%s'" % (mode, temp_name);
 	for ep in episodes:
-		print ("\t%s ep #%s: airdate=%s title='%s' %s" % (ep['append'],ep['epnum'],ep['airdate'],ep['title'],ep['append']));
+		print ("\t\033[1m%s\033[0m ep #%s: airdate=%s title='%s' \033[1m%s\033[0m" % (ep['append'],ep['epnum'],ep['airdate'],ep['title'],ep['append']));
 
 main();
 
